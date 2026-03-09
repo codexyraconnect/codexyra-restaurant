@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codexyra Restaurant — Fine Dining Chandigarh</title>
+    <meta name="description" content="Codexyra Restaurant — Experience the Art of Fine Dining in Chandigarh. Luxury flavors crafted by master chefs." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Josefin+Sans:wght@100;200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+      :root {
+        --black: #020202;
+        --charcoal: #0f0f0f;
+        --charcoal-light: #1a1a1a;
+        --gold: #c9a84c;
+        --gold-light: #e2c47a;
+        --gold-dark: #a07830;
+        --orange: #e07020;
+        --orange-light: #f08030;
+        --white: #f5f0e8;
+        --white-dim: #c8c0b0;
+        --glass: rgba(255,255,255,0.04);
+        --glass-border: rgba(201,168,76,0.18);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: 'Josefin Sans', sans-serif;
+        overflow-x: hidden;
+        cursor: none;
+      }
+      /* Custom cursor */
+      #cursor { position: fixed; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; pointer-events: none; z-index: 99999; transform: translate(-50%,-50%); transition: width 0.2s, height 0.2s, background 0.2s; }
+      #cursor-ring { position: fixed; width: 36px; height: 36px; border: 1.5px solid var(--gold); border-radius: 50%; pointer-events: none; z-index: 99998; transform: translate(-50%,-50%); transition: all 0.12s ease; opacity: 0.6; }
+      body:has(a:hover) #cursor, body:has(button:hover) #cursor { width: 16px; height: 16px; background: var(--orange); }
+      body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring { width: 50px; height: 50px; border-color: var(--orange); }
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: var(--charcoal); }
+      ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
+    </style>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
